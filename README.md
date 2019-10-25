@@ -1,2 +1,2 @@
-# Hapi Boilerplate Web
+# Hapi Template
 Quickstart a new project.
