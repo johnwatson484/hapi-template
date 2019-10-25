@@ -1,19 +1,18 @@
-const Hapi = require('@hapi/hapi')
+const hapi = require('@hapi/hapi')
 
-module.exports = async () => {
-  const server = Hapi.server({
-    port: 3000,
-    host: 'localhost'
+async function createServer () {
+  // Create the hapi server
+  const server = hapi.server({
+    port: 3000
   })
 
-  server.route({
-    method: 'GET',
-    path: '/',
-    handler: (request, h) => {
-      return 'Hello World!'
-    }
-  })
+  // Register the plugins
+  await server.register(require('@hapi/inert'))
+  await server.register(require('./plugins/views'))
+  await server.register(require('./plugins/router'))
+  await server.register(require('blipp'))
 
-  await server.start()
-  console.log('Server running on %s', server.info.uri)
+  return server
 }
+
+module.exports = createServer

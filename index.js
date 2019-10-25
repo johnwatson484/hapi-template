@@ -1,6 +1,7 @@
-const init = require('./server')
+const createServer = require('./server')
 
-init()
+createServer()
+  .then(server => server.start())
   .catch(err => {
     console.log(err)
     process.exit(1)
