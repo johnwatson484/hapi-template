@@ -1,6 +1,6 @@
 const path = require('path')
 const nunjucks = require('nunjucks')
-const config = ('../config')
+const config = require('../config')
 
 module.exports = {
   plugin: require('@hapi/vision'),
