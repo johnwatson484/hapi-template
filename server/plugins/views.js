@@ -1,5 +1,6 @@
 const path = require('path')
 const nunjucks = require('nunjucks')
+const config = ('../config')
 
 module.exports = {
   plugin: require('@hapi/vision'),
@@ -25,8 +26,10 @@ module.exports = {
     },
     path: '../views',
     relativeTo: __dirname,
+    isCached: !config.isDev,
     context: {
-      assetPath: '/assets'
+      assetPath: '/assets',
+      appName: config.appName
     }
   }
 }
