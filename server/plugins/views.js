@@ -24,6 +24,9 @@ module.exports = {
       }
     },
     path: '../views',
-    relativeTo: __dirname
+    relativeTo: __dirname,
+    context: {
+      assetPath: '/assets'
+    }
   }
 }
