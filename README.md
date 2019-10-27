@@ -1,2 +1,2 @@
 # Hapi Template
-Quickstart a new project.
+Quick start new Node.js project using Hapi.js.
