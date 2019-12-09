@@ -19,5 +19,6 @@ COPY --chown=node:node . .
 
 ARG PORT=3000
 ENV PORT ${PORT}
+ENV NODE_ENV=production
 EXPOSE ${PORT} 9229 9230
 CMD [ "node", "index" ]
