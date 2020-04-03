@@ -4,10 +4,3 @@ services:
     build: .
     image: hapi-template
     container_name: hapi-template
-    command: npm run start:watch
-    ports:
-      - "3000:3000"
-    volumes:
-      - ./server/:/usr/src/app/server/
-      - ./index.js:/usr/src/app/index.js
-      - ./package.json:/usr/src/app/package.json

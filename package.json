@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "start:watch": "nodemon --inspect=0.0.0.0 --ext js,njk --legacy-watch index.js"
+    "start:watch": "nodemon --inspect=0.0.0.0 --ext css,js,njk --legacy-watch app/index.js"
   },
   "author": "John Watson",
   "license": "MIT",
