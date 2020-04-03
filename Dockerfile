@@ -11,8 +11,7 @@ ENV PATH=$PATH:/home/node/.npm-global/bin
 
 ARG PORT=3000
 ENV PORT ${PORT}
-ARG PORT_DEBUG=9229
-EXPOSE ${PORT} ${PORT_DEBUG}
+EXPOSE ${PORT}
 
 COPY --chown=node:node package*.json ./
 RUN npm install
@@ -22,5 +21,6 @@ CMD [ "npm", "run", "start:watch" ]
 
 # Production
 FROM development AS production
+ENV NODE_ENV production
 RUN npm ci
 CMD [ "node", "app" ]
