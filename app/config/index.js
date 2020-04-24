@@ -23,8 +23,4 @@ if (error) {
   throw new Error(`The server config is invalid. ${error.message}`)
 }
 
-value.isDev = (value.env === 'development' || value.env === 'test')
-value.isTest = value.env === 'test'
-value.isProd = value.env === 'production'
-
 module.exports = value
