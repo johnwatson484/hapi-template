@@ -19,7 +19,7 @@
     "@hapi/joi": "^17.0.2",
     "@hapi/vision": "^6.0.0",
     "blipp": "^4.0.1",
-    "nodemon": "^2.0.2",
+    "nodemon": "^2.0.3",
     "nunjucks": "^3.2.1",
     "standard": "^14.3.1"
   }
