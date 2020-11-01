@@ -23,7 +23,7 @@
     "nunjucks": "^3.2.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4",
+    "nodemon": "^2.0.6",
     "standard": "^14.3.4"
   }
 }
