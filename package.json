@@ -20,7 +20,7 @@
     "joi": "^17.3.0",
     "@hapi/vision": "^6.0.1",
     "blipp": "^4.0.2",
-    "nunjucks": "^3.2.2"
+    "nunjucks": "^3.2.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.6",
