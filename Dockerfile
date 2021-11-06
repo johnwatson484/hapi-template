@@ -1,5 +1,5 @@
 # Development
-FROM node:14.15.4-alpine AS development
+FROM node:16-alpine AS development
 ENV NODE_ENV development
 ARG PORT=3000
 ENV PORT ${PORT}
@@ -9,7 +9,7 @@ ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH=$PATH:/home/node/.npm-global/bin
 
 RUN apk update && \
-    apk add --no-cache git=~2.24
+    apk add --no-cache git
 
 USER node
 WORKDIR /home/node
