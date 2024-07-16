@@ -3,5 +3,5 @@ module.exports = [{
   path: '/',
   handler: (request, h) => {
     return h.view('home')
-  }
+  },
 }]

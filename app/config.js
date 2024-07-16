@@ -5,14 +5,14 @@ const envs = ['development', 'test', 'production']
 const schema = joi.object().keys({
   port: joi.number().default(3000),
   env: joi.string().valid(...envs).default(envs[0]),
-  appName: joi.string()
+  appName: joi.string(),
 })
 
 // Build config
 const config = {
   port: process.env.PORT,
   env: process.env.NODE_ENV,
-  appName: 'Hapi Template'
+  appName: 'Hapi Template',
 }
 
 // Validate config
