@@ -1,4 +1,5 @@
 container:
+  image: hapi-template
   port: 3000
   resourceTier: M
 
