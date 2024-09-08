@@ -1,0 +1,15 @@
+container:
+  port: 3000
+  resourceTier: M
+
+configMap:
+  environment: production
+
+secret:
+  apiKey: secret-value
+
+deployment: {}
+
+ingress:
+  host: example.com
+
