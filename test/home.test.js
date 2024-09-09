@@ -1,4 +1,4 @@
-describe('Home test', () => {
+describe('home test', () => {
   const createServer = require('../app/server')
   let server
 
