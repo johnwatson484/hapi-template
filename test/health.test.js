@@ -1,6 +1,6 @@
 import { createServer } from '../src/server.js'
 
-describe('home test', () => {
+describe('health test', () => {
   let server
 
   beforeEach(async () => {
@@ -8,10 +8,19 @@ describe('home test', () => {
     await server.initialize()
   })
 
-  test('GET /home route returns 200', async () => {
+  test('GET /healthy route returns 200', async () => {
     const options = {
       method: 'GET',
-      url: '/',
+      url: '/healthy',
+    }
+    const response = await server.inject(options)
+    expect(response.statusCode).toBe(200)
+  })
+
+  test('GET /healthz route returns 200', async () => {
+    const options = {
+      method: 'GET',
+      url: '/healthz',
     }
     const response = await server.inject(options)
     expect(response.statusCode).toBe(200)

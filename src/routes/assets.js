@@ -1,12 +1,14 @@
-module.exports = [{
+const route = {
   method: 'GET',
   path: '/assets/{path*}',
   handler: {
     directory: {
       path: [
-        'app/public/css',
-        'app/public/js',
+        'app/assets/css',
+        'app/assets/js',
       ],
     },
   },
-}]
+}
+
+export default route

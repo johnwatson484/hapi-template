@@ -1,6 +1,6 @@
-module.exports = {
+const plugin = {
   plugin: {
-    name: 'error-pages',
+    name: 'errors',
     register: (server, options) => {
       server.ext('onPreResponse', (request, h) => {
         const response = request.response
@@ -15,7 +15,7 @@ module.exports = {
           request.log('error', {
             statusCode,
             message: response.message,
-            stack: response.data ? response.data.stack : response.stack,
+            stack: response.data?.stack,
           })
 
           return h.view('500').code(statusCode)
@@ -25,3 +25,5 @@ module.exports = {
     },
   },
 }
+
+export default plugin

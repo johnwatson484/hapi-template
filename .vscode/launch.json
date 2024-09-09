@@ -47,7 +47,7 @@
     },
     {
       "name": "Node: Launch",
-      "program": "${workspaceFolder}/app",
+      "program": "${workspaceFolder}/src",
       "request": "launch",
       "skipFiles": [
         "<node_internals>/**",
@@ -62,7 +62,7 @@
     },
     {
       "name": "Node: Server",
-      "program": "${workspaceFolder}/app",
+      "program": "${workspaceFolder}/src",
       "request": "launch",
       "skipFiles": [
         "<node_internals>/**",

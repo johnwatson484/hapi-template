@@ -1,9 +1,13 @@
-const path = require('path')
-const nunjucks = require('nunjucks')
-const config = require('../config')
+import path from 'path'
+import { fileURLToPath } from 'url'
+import nunjucks from 'nunjucks'
+import Vision from '@hapi/vision'
+import config from '../config.js'
 
-module.exports = {
-  plugin: require('@hapi/vision'),
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+const plugin = {
+  plugin: Vision,
   options: {
     engines: {
       njk: {
@@ -17,7 +21,7 @@ module.exports = {
         prepare: (options, next) => {
           options.compileOptions.environment = nunjucks.configure(path.join(options.relativeTo || process.cwd(), options.path), {
             autoescape: true,
-            watch: false,
+            watch: config.get('isDev'),
           })
 
           return next()
@@ -26,10 +30,12 @@ module.exports = {
     },
     path: '../views',
     relativeTo: __dirname,
-    isCached: !config.isDev,
+    isCached: !config.get('isDev'),
     context: {
       assetPath: '/assets',
-      appName: config.appName,
+      appName: config.get('appName'),
     },
   },
 }
+
+export default plugin

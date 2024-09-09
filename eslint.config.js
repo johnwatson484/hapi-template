@@ -1,1 +1,3 @@
-module.exports = require('neostandard')({ globals: ['describe', 'beforeEach', 'expect', 'test', 'afterEach', 'jest', 'beforeAll', 'afterAll'] })
+import neoStandard from 'neostandard'
+
+export default neoStandard({ globals: ['describe', 'beforeEach', 'expect', 'test', 'afterEach', 'jest', 'beforeAll', 'afterAll'] })
