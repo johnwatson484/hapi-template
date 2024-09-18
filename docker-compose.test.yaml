@@ -1,5 +1,8 @@
 services:
   hapi-template:
+    extends:
+      file: docker-compose.yaml
+      service: hapi-template
     build:
       target: development
     image: hapi-template-development
