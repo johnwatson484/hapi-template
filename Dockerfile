@@ -2,7 +2,7 @@
 FROM node:20-alpine AS development
 ENV NODE_ENV=development
 ARG PORT=3000
-ENV PORT ${PORT}
+ENV PORT=${PORT}
 EXPOSE ${PORT} 9229
 
 # Set global npm dependencies to be stored under the node user directory
