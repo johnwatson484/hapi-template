@@ -5,7 +5,7 @@ services:
       service: hapi-template
     build:
       target: development
-    image: hapi-template-development
+    image: hapi-template-test
     container_name: hapi-template-test
     command: npm run test
     volumes:
