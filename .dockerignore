@@ -1,5 +1,8 @@
 node_modules/
 test-output/
+scripts/
+helm/
+.vscode/
 .dockerignore
 .gitignore
 docker-compose*
@@ -8,4 +11,3 @@ README.md
 Dockerfile
 npm-debug.log
 azure-pipelines.yaml
-jsconfig.json

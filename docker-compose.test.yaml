@@ -13,6 +13,5 @@ services:
       - ./test:/home/node/test
       - ./test-output:/home/node/test-output
       - ./package.json:/home/node/package.json
-      - ./eslint.config.js:/home/node/eslint.config.js
     environment:
       NODE_OPTIONS: "$NODE_OPTIONS --experimental-vm-modules"
