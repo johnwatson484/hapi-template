@@ -9,6 +9,7 @@
     "test:watch": "jest --coverage=false --onlyChanged --watch --runInBand",
     "test:lint": "eslint",
     "test:debug": "node --inspect-brk=0.0.0.0 ./node_modules/jest/bin/jest.js --coverage=false --onlyChanged --watch --runInBand --no-cache",
+    "start": "node src",
     "start:watch": "nodemon --inspect=0.0.0.0 --ext js,css,njk --legacy-watch src/index.js",
     "start:debug": "nodemon --inspect-brk=0.0.0.0 --ext js,css,njk --legacy-watch src/index.js"
   },
