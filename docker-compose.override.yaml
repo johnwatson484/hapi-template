@@ -10,6 +10,8 @@ services:
     volumes:
       - ./src:/home/node/src
       - ./package.json:/home/node/package.json
+    networks:
+      - hapi-template
 
 networks:
   hapi-template:
