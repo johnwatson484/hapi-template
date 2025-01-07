@@ -3,7 +3,6 @@ import HapiPino from 'hapi-pino'
 const plugin = {
   plugin: HapiPino,
   options: {
-    logPayload: true,
     level: 'warn',
   },
 }
