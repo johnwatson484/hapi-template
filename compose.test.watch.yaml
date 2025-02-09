@@ -1,7 +1,7 @@
 services:
   hapi-template:
     extends:
-      file: docker-compose.test.yaml
+      file: compose.test.yaml
       service: hapi-template
     command: npm run test:watch
     volumes:

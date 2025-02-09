@@ -1,7 +1,7 @@
 services:
   hapi-template:
     extends:
-      file: docker-compose.test.watch.yaml
+      file: compose.test.watch.yaml
       service: hapi-template
     command: npm run test:debug
     ports:
