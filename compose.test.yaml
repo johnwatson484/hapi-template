@@ -1,8 +1,5 @@
 services:
   hapi-template:
-    extends:
-      file: compose.yaml
-      service: hapi-template
     build:
       target: development
     image: hapi-template-test
