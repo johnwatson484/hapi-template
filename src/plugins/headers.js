@@ -5,8 +5,7 @@ const plugin = {
       server.ext('onPreResponse', (request, h) => {
         const response = request.response
 
-        // Ensure the response is an object (not a stream, etc.)
-        if (response.isBoom || response.headers) {
+        if (response.headers) {
           response.headers['X-Content-Type-Options'] = 'nosniff'
           response.headers['X-Frame-Options'] = 'DENY'
           response.headers['X-XSS-Protection'] = '1; mode=block'
