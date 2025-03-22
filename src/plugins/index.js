@@ -15,9 +15,9 @@ async function registerPlugins (server) {
     Crumb,
     Scooter,
     csp,
-    headers,
     logging,
     errors,
+    headers,
     views,
     router,
   ]
