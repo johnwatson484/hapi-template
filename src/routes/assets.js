@@ -6,6 +6,7 @@ const route = {
       path: [
         'src/assets/css',
         'src/assets/js',
+        'src/assets/images',
       ],
     },
   },
