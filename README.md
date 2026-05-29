@@ -8,7 +8,7 @@ Either:
 - Docker Compose
 
 Or:
-- Node 22+
+- Node 24+
 
 ## Running application
 ### Docker
